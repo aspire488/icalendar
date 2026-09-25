@@ -76,7 +76,7 @@ class vBoolean(int):
             raise ValueError(f"Expected 'TRUE' or 'FALSE'. Got {ical}") from e
 
     @classmethod
-    def examples(cls) -> list[Self]:
+    def examples(cls) -> list["vBoolean"]:
         """Examples of vBoolean."""
         return [
             cls(True),
