@@ -152,6 +152,8 @@ linkcheck_retries = 1
 # -- nitpicky mode options ----------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-nitpicky-mode
 # Use `make clean livehtml SPHINXOPTS="-n"`
+nitpicky = True
+
 nitpick_ignore_regex = [
     (
         r"py:.*",
