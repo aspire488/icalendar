@@ -160,8 +160,8 @@ def test_from_xml_with_timezone(spec, v_period, tzid, tzp):
 
 
 @pytest.mark.parametrize("spec", PERIODS_DURATION_INVALID)
-def test_negative_duration_raises_error(spec, v_period):
-    """A negative duration is parsed but wrong."""
+def test_non_positive_duration_raises_error(spec, v_period):
+    """A zero or negative duration is invalid."""
     xml = list2xml(spec2list(spec))
     with pytest.raises(XCalParsingError) as e:
         v_period.from_xcal(xml)
